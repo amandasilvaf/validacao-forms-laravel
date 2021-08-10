@@ -1,4 +1,7 @@
 {
+    "/bootstrap/bootstrap.css": "/bootstrap/bootstrap.css?id=da38fb06c60d344cb8ab",
     "/site/css/style.css": "/site/css/style.css?id=60ff71259981d4a09b15",
-    "/site/js/script.js": "/site/js/script.js?id=b624a3556e4b7ad5c7d1"
+    "/site/js/script.js": "/site/js/script.js?id=b624a3556e4b7ad5c7d1",
+    "/jquery/jquery.js": "/jquery/jquery.js?id=2849239b95f5a9a2aea3",
+    "/bootstrap/bootstrap.js": "/bootstrap/bootstrap.js?id=836835c954fa1283987f"
 }

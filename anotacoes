@@ -1,1 +1,4 @@
-Para incorporar o Bootstrap:
+Para incorporar o Bootstrap (sem utilizar CDN):
+
+1 - Baixar o Bootstrap
+    -> npm install bootstrap 

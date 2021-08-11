@@ -37,12 +37,24 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
+
+        // 'nameDoInput.regra' => 'mensagem específica'
+         $mensagens = [
+            'nome.required' => 'O nome é requerido/obrigatório',
+            'nome.min' => 'O nome deve conter no mínimo 3 caracteres',
+            'email.email' => 'O e-mail informado é inválido.',
+            //Agora criando uma mensagem genérica para todos os campos requeridos:
+            'required' => 'O campo :attribute não pode estar em branco.'
+        ];  
+
         // o atributo aqui é o name do form, não o id.
         $request->validate([
-            'nome' => 'required',
+            'nome' => 'required|min:3',
             'idade' => 'max:3|required',
             'email' => 'unique:clientes|required|email',
-        ]);
+        ], $mensagens);
+
+         
 
         $cliente = new Cliente();
         $cliente->nome = $request->input('nome');

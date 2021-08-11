@@ -52,9 +52,8 @@ class ClienteController extends Controller
             'nome' => 'required|min:3',
             'idade' => 'max:3|required',
             'email' => 'unique:clientes|required|email',
+            'endereco' => 'required'
         ], $mensagens);
-
-         
 
         $cliente = new Cliente();
         $cliente->nome = $request->input('nome');

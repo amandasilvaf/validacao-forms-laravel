@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Cliente;
 
 class ClienteController extends Controller
 {
@@ -13,7 +14,9 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        //
+        $clientes = Cliente::all();
+        // ('pasta.arquivoblade')
+        return view('cliente.clientes', compact('clientes'));
     }
 
     /**
@@ -23,7 +26,7 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        //
+        return view('cliente.novoCliente');
     }
 
     /**

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ClienteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,10 +19,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
-Route::get('/novo', function() {
-    return view('site/home');
-});
+Route::get('/novoCliente', [ClienteController::class, 'create']);
 
-Route::get('/novoCliente', function() {
-    return view('cliente/novoCliente');
-});
+Route::get('/', [ClienteController::class, 'index']);
+

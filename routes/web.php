@@ -22,3 +22,6 @@ Route::get('/novo', function() {
     return view('site/home');
 });
 
+Route::get('/novoCliente', function() {
+    return view('cliente/novoCliente');
+});

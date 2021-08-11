@@ -13,6 +13,7 @@
 <body>
     <h1>Hello, Laravel-mix!!!</h1>
     
+    
 
     <script src="{{ url(mix('jquery/jquery.js')) }}"></script>
     <script src="{{ url(mix('bootstrap/bootstrap.js')) }}"></script>

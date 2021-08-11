@@ -2,3 +2,25 @@ Para incorporar o Bootstrap (sem utilizar CDN):
 
 1 - Baixar o Bootstrap
     -> npm install bootstrap 
+
+2- Instalar todas as dependências presentes em package.json
+    -> npm install
+
+3- Inserir o Jquery e o Bootstrap no webpack.mix.js
+    -> 
+    .scripts('node_modules/jquery/dist/jquery.js','public/jquery/jquery.js')
+    .scripts('node_modules/bootstrap/dist/js/bootstrap.bundle.js', 'public/bootstrap/bootstrap.js')
+    .sass('node_modules/bootstrap/scss/bootstrap.scss','public/bootstrap/bootstrap.css')
+
+OBS: o bootstrap.bundle.js já traz o popper.
+
+4 - npm run dev -> para 'clonar' os arquivos (do passo 3) lá na pasta public (que é web accessible)
+
+5 - Importar em alguma página (em vez de usar CDN):
+    -> antes do fechamento do </body> 
+        <script src="{{ url(mix('bootstrap/bootstrap.js')) }}"></script>
+    
+    -> no <head> (antes do meu css)
+        <link rel="stylesheet" href="{{ url(mix('bootstrap/bootstrap.css'))}}">
+
+OBS: apenas lembrando que esse helper url(mix('')) é utilizado pq coloquei o  .version(); ao final do webpack.mix.js (para limpar sempre o cache do navegador!)

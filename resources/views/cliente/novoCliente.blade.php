@@ -59,9 +59,9 @@
     </main>
 
     {{--  $errors é um array retornado pela $request  --}}
-    @if (isset($errors))
+    {{--  @if (isset($errors))
         {{ var_dump($errors)}} 
-    @endif
+    @endif  --}}
    
     <script src="{{ url(mix('jquery/jquery.js')) }}"></script>
     <script src="{{ url(mix('bootstrap/bootstrap.js')) }}"></script>

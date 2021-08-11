@@ -37,10 +37,11 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
+        // o atributo aqui é o name do form, não o id.
         $request->validate([
             'nome' => 'required',
-            'idade' => 'max:3',
-            'email' => 'unique:clientes',
+            'idade' => 'max:3|required',
+            'email' => 'unique:clientes|required|email',
         ]);
 
         $cliente = new Cliente();

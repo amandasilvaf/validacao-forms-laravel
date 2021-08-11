@@ -43,11 +43,26 @@
                             <button type="cancel" class="btn btn-secondary btn-sm">Cancelar</button>
                         </form>
                     </div>
+            @if($errors->any())
+                    <div class="card-footer">
+                    @foreach ($errors->all() as $error)
+                        <div class="alert alert-danger" role="alert">
+                            {{ $error}}
+                        </div>
+                    @endforeach
+                    </div>
+            @endif
+
                 </div>
             </div>
         </div>
     </main>
 
+    {{--  $errors é um array retornado pela $request  --}}
+    @if (isset($errors))
+        {{ var_dump($errors)}} 
+    @endif
+   
     <script src="{{ url(mix('jquery/jquery.js')) }}"></script>
     <script src="{{ url(mix('bootstrap/bootstrap.js')) }}"></script>
     
